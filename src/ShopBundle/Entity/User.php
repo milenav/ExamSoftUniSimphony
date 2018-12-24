@@ -24,7 +24,7 @@ class User
     /**
      * @var string
      *
-     * @ORM\Column(name="username", type="string", length=255, unique=true)
+     * @ORM\Column(name="fullName", type="string", length=255, unique=true)
      */
     private $fullName;
 
@@ -34,13 +34,6 @@ class User
      * @ORM\Column(name="email", type="string", length=255, unique=true)
      */
     private $email;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="password", type="string", length=255)
-     */
-    private $password;
 
     /**
      * @var string
@@ -68,7 +61,7 @@ class User
     }
 
     /**
-     * Set username
+     * Set fullName
      *
      * @param string $fullName
      *
@@ -82,7 +75,7 @@ class User
     }
 
     /**
-     * Get username
+     * Get fullName
      *
      * @return string
      */
@@ -113,30 +106,6 @@ class User
     public function getEmail()
     {
         return $this->email;
-    }
-
-    /**
-     * Set password
-     *
-     * @param string $password
-     *
-     * @return User
-     */
-    public function setPassword($password)
-    {
-        $this->password = $password;
-
-        return $this;
-    }
-
-    /**
-     * Get password
-     *
-     * @return string
-     */
-    public function getPassword()
-    {
-        return $this->password;
     }
 
     /**
