@@ -1391,7 +1391,7 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="355" parent="11" name="users">
+    <table id="355" parent="11" name="user">
       <Collation>utf8_unicode_ci</Collation>
     </table>
     <column id="356" parent="355" name="id">
@@ -1407,13 +1407,13 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="358" parent="355" name="email">
+    <column id="358" parent="355" name="password">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="359" parent="355" name="password">
+    <column id="359" parent="355" name="email">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
@@ -1431,37 +1431,55 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="362" parent="355" name="UNIQ_1483A5E93157D290">
+    <index id="362" parent="355" name="UNIQ_8D93D6493157D290">
       <ColNames>fullName</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="363" parent="355" name="UNIQ_1483A5E9E7927C74">
+    <index id="363" parent="355" name="UNIQ_8D93D64935C246D5">
+      <ColNames>password</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <index id="364" parent="355" name="UNIQ_8D93D649E7927C74">
       <ColNames>email</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="364" parent="355" name="UNIQ_1483A5E9444F97DD">
+    <index id="365" parent="355" name="UNIQ_8D93D649D4E6F81">
+      <ColNames>address</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <index id="366" parent="355" name="UNIQ_8D93D649444F97DD">
       <ColNames>phone</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="365" parent="355" name="PRIMARY">
+    <key id="367" parent="355" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="366" parent="355" name="UNIQ_1483A5E93157D290">
+    <key id="368" parent="355" name="UNIQ_8D93D6493157D290">
       <ColNames>fullName</ColNames>
-      <UnderlyingIndexName>UNIQ_1483A5E93157D290</UnderlyingIndexName>
+      <UnderlyingIndexName>UNIQ_8D93D6493157D290</UnderlyingIndexName>
     </key>
-    <key id="367" parent="355" name="UNIQ_1483A5E9E7927C74">
+    <key id="369" parent="355" name="UNIQ_8D93D64935C246D5">
+      <ColNames>password</ColNames>
+      <UnderlyingIndexName>UNIQ_8D93D64935C246D5</UnderlyingIndexName>
+    </key>
+    <key id="370" parent="355" name="UNIQ_8D93D649E7927C74">
       <ColNames>email</ColNames>
-      <UnderlyingIndexName>UNIQ_1483A5E9E7927C74</UnderlyingIndexName>
+      <UnderlyingIndexName>UNIQ_8D93D649E7927C74</UnderlyingIndexName>
     </key>
-    <key id="368" parent="355" name="UNIQ_1483A5E9444F97DD">
+    <key id="371" parent="355" name="UNIQ_8D93D649D4E6F81">
+      <ColNames>address</ColNames>
+      <UnderlyingIndexName>UNIQ_8D93D649D4E6F81</UnderlyingIndexName>
+    </key>
+    <key id="372" parent="355" name="UNIQ_8D93D649444F97DD">
       <ColNames>phone</ColNames>
-      <UnderlyingIndexName>UNIQ_1483A5E9444F97DD</UnderlyingIndexName>
+      <UnderlyingIndexName>UNIQ_8D93D649444F97DD</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>

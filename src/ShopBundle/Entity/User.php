@@ -3,6 +3,7 @@
 namespace ShopBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * User
@@ -22,6 +23,13 @@ class User
     private $id;
 
     /**
+     * @Assert\NotNull()
+     * @Assert\Regex("/^[a-zA-z]+$/")
+     * @Assert\Length(
+     *      min = 6,
+     *      max = 30
+     * )
+     *
      * @var string
      *
      * @ORM\Column(name="fullName", type="string", length=255, unique=true)
@@ -29,6 +37,25 @@ class User
     private $fullName;
 
     /**
+     * @Assert\NotNull()
+     * @Assert\Regex("/^[a-z9-0]+$/")
+     * @Assert\Length(
+     *      min = 6
+     * )
+     *
+     * @var string
+     *
+     * @ORM\Column(name="password", type="string", length=255, unique=true)
+     */
+    private $password;
+
+    /**
+     * @Assert\NotNull()
+     * @Assert\Email(
+     *     message = "The email is not a valid.",
+     *     checkMX = true
+     * )
+     *
      * @var string
      *
      * @ORM\Column(name="email", type="string", length=255, unique=true)
@@ -36,13 +63,18 @@ class User
     private $email;
 
     /**
+     * @Assert\NotNull()
+     *
      * @var string
      *
-     * @ORM\Column(name="address", type="string", length=255)
+     * @ORM\Column(name="address", type="string", length=255, unique=true)
      */
     private $address;
 
     /**
+     * @Assert\NotNull()
+     * @Assert\Regex("/^\+\d{10,12}$/")
+     *
      * @var string
      *
      * @ORM\Column(name="phone", type="string", length=255, unique=true)
@@ -82,6 +114,30 @@ class User
     public function getFullName()
     {
         return $this->fullName;
+    }
+
+    /**
+     * Set password
+     *
+     * @param string $password
+     *
+     * @return User
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+
+        return $this;
+    }
+
+    /**
+     * Get password
+     *
+     * @return string
+     */
+    public function getPassword()
+    {
+        return $this->password;
     }
 
     /**
