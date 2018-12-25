@@ -3,7 +3,6 @@
 namespace ShopBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * User
@@ -23,26 +22,13 @@ class User
     private $id;
 
     /**
-     * @Assert\NotNull()
-     * @Assert\Regex("/^[a-zA-z]+$/")
-     * @Assert\Length(
-     *      min = 6,
-     *      max = 30
-     * )
-     *
      * @var string
      *
-     * @ORM\Column(name="fullName", type="string", length=255, unique=true)
+     * @ORM\Column(name="username", type="string", length=255, unique=true)
      */
-    private $fullName;
+    private $username;
 
     /**
-     * @Assert\NotNull()
-     * @Assert\Regex("/^[a-z9-0]+$/")
-     * @Assert\Length(
-     *      min = 6
-     * )
-     *
      * @var string
      *
      * @ORM\Column(name="password", type="string", length=255, unique=true)
@@ -50,31 +36,27 @@ class User
     private $password;
 
     /**
-     * @Assert\NotNull()
-     * @Assert\Email(
-     *     message = "The email is not a valid.",
-     *     checkMX = true
-     * )
-     *
      * @var string
      *
-     * @ORM\Column(name="email", type="string", length=255, unique=true)
+     * @ORM\Column(name="fullName", type="string", length=255)
      */
-    private $email;
+    private $fullName;
 
     /**
-     * @Assert\NotNull()
-     *
      * @var string
      *
-     * @ORM\Column(name="address", type="string", length=255, unique=true)
+     * @ORM\Column(name="city", type="string", length=255)
+     */
+    private $city;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="address", type="string", length=255)
      */
     private $address;
 
     /**
-     * @Assert\NotNull()
-     * @Assert\Regex("/^\+\d{10,12}$/")
-     *
      * @var string
      *
      * @ORM\Column(name="phone", type="string", length=255, unique=true)
@@ -93,27 +75,27 @@ class User
     }
 
     /**
-     * Set fullName
+     * Set username
      *
-     * @param string $fullName
+     * @param string $username
      *
      * @return User
      */
-    public function setFullName($fullName)
+    public function setUsername($username)
     {
-        $this->fullName = $fullName;
+        $this->username = $username;
 
         return $this;
     }
 
     /**
-     * Get fullName
+     * Get username
      *
      * @return string
      */
-    public function getFullName()
+    public function getUsername()
     {
-        return $this->fullName;
+        return $this->username;
     }
 
     /**
@@ -141,27 +123,51 @@ class User
     }
 
     /**
-     * Set email
+     * Set fullName
      *
-     * @param string $email
+     * @param string $fullName
      *
      * @return User
      */
-    public function setEmail($email)
+    public function setFullName($fullName)
     {
-        $this->email = $email;
+        $this->fullName = $fullName;
 
         return $this;
     }
 
     /**
-     * Get email
+     * Get fullName
      *
      * @return string
      */
-    public function getEmail()
+    public function getFullName()
     {
-        return $this->email;
+        return $this->fullName;
+    }
+
+    /**
+     * Set city
+     *
+     * @param string $city
+     *
+     * @return User
+     */
+    public function setCity($city)
+    {
+        $this->city = $city;
+
+        return $this;
+    }
+
+    /**
+     * Get city
+     *
+     * @return string
+     */
+    public function getCity()
+    {
+        return $this->city;
     }
 
     /**
