@@ -43,14 +43,6 @@ class User implements UserInterface
      */
     private $email;
 
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="fullName", type="string", length=255)
-     */
-    private $fullName;
-
     /**
      * @var string
      *
@@ -155,29 +147,6 @@ class User implements UserInterface
         return $this->email;
     }
 
-    /**
-     * Set fullName
-     *
-     * @param string $fullName
-     *
-     * @return User
-     */
-    public function setFullName($fullName)
-    {
-        $this->fullName = $fullName;
-
-        return $this;
-    }
-
-    /**
-     * Get fullName
-     *
-     * @return string
-     */
-    public function getFullName()
-    {
-        return $this->fullName;
-    }
 
     /**
      * Set city
