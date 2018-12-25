@@ -2,9 +2,11 @@
 
 namespace ShopBundle\Form;
 
-use Doctrine\DBAL\Types\TextType;
+
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Tests\Extension\Core\Type\PasswordTypeTest;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -19,6 +21,7 @@ class UserType extends AbstractType
         $builder
             ->add('username', TextType::class)
             ->add('password', PasswordType::class)
+            ->add('email', EmailType::class)
             ->add('fullName', TextType::class)
             ->add('city', TextType::class)
             ->add('address', TextType::class)

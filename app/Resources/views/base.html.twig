@@ -37,7 +37,7 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                    {# {% if app.user %}
+                    {% if app.user %}
                           <li>
                               <a href="{{ path('user_profile') }}">
                                   My Profile
@@ -50,16 +50,16 @@
                           </li>
                       {% else %}
                           <li>
-                              <a href="{{ path('user_new') }}">
+                              <a href="{{ path('user_register') }}">
                                   REGISTER
                               </a>
-                          </li>#}
+                          </li>
                           <li>
                               <a href="{{ path('security_login') }}">
                                   LOGIN
                               </a>
                           </li>
-                        {#{% endif %}#}
+                        {% endif %}
                     </ul>
                 </div>
             </div>

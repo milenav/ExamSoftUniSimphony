@@ -3,6 +3,7 @@
 namespace ShopBundle\Controller;
 
 use ShopBundle\Entity\User;
+use ShopBundle\Form\UserType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -17,8 +18,12 @@ class SecurityController extends Controller
         return $this->render('security/login.html.twig');
     }
 
-    public function registerAction()
+    /**
+     * @Route("/logout", name="security_logout")
+     * @throws \Exception
+     */
+    public function logout()
     {
-        $user = new User();
+        throw new \Exception("Logout failed!");
     }
 }
