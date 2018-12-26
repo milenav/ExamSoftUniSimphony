@@ -1,7 +1,6 @@
 {% extends'base.html.twig' %}
 
 {% block body %}
-
     <form name="register" action="{{ path('user_register') }}" method="post">
         <div class="form-group">
             <label for="exampleInputUsername">User Name</label>
@@ -28,5 +27,4 @@
         </div>
         <button type="submit" class="btn btn-primary">Register</button>
     </form>
-
 {% endblock %}

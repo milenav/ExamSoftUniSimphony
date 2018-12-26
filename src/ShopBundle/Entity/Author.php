@@ -45,7 +45,7 @@ class Author
     /**
      * @var string
      *
-     * @ORM\Column(name="note", type="string", length=500)
+     * @ORM\Column(name="note", type="text")
      */
     private $note;
 

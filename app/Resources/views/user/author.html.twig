@@ -1,0 +1,28 @@
+{% extends'base.html.twig' %}
+
+{% block body %}
+
+    <form name="authenticate" action="{{ path('user_author') }}" method="post" xmlns="http://www.w3.org/1999/html">
+        <div class="form-group">
+            <label for="exampleInputFirstName">First Name</label>
+            <input name="author[firstName]" type="text" class="form-control" id="exampleInputUsername" placeholder="Enter First Name">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputLastName">Last Name</label>
+            <input name="author[lastName]" type="text" class="form-control" id="exampleInputUsername" placeholder="Enter Last Name">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputUsername">Email</label>
+            <input name="author[email]" type="text" class="form-control" id="exampleInputUsername" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputNote">Note</label>
+            <input name="author[note]" type="text" class="form-control" id="exampleInputUsername" placeholder="Note">
+        </div>
+        <input type="hidden" name="_target_path" value="{{ path('user_author') }}" />
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+
+
+{% endblock %}
+
