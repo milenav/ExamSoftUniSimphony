@@ -46,13 +46,6 @@ class User implements UserInterface
     /**
      * @var string
      *
-     * @ORM\Column(name="city", type="string", length=255)
-     */
-    private $city;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="address", type="string", length=255)
      */
     private $address;
@@ -145,31 +138,6 @@ class User implements UserInterface
     public function getEmail()
     {
         return $this->email;
-    }
-
-
-    /**
-     * Set city
-     *
-     * @param string $city
-     *
-     * @return User
-     */
-    public function setCity($city)
-    {
-        $this->city = $city;
-
-        return $this;
-    }
-
-    /**
-     * Get city
-     *
-     * @return string
-     */
-    public function getCity()
-    {
-        return $this->city;
     }
 
     /**

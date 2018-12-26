@@ -31,6 +31,17 @@ body {
     white-space: normal;
 }
 
+.jumbotron {
+  background-image: url(https://avatars.mds.yandex.net/get-pdb/1016500/7347f1bf-f447-41d2-bf3d-b34a3385c356/orig);
+  background-size: cover;
+  height: 100%;}
+
+.py-5{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,

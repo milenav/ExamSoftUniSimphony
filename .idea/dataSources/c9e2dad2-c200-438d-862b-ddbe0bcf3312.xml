@@ -1413,74 +1413,62 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="359" parent="355" name="fullName">
+    <column id="359" parent="355" name="address">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="360" parent="355" name="city">
+    <column id="360" parent="355" name="phone">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="361" parent="355" name="address">
+    <column id="361" parent="355" name="email">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="362" parent="355" name="phone">
-      <Position>7</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="363" parent="355" name="email">
-      <Position>8</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="364" parent="355" name="UNIQ_8D93D649F85E0677">
+    <index id="362" parent="355" name="UNIQ_8D93D649F85E0677">
       <ColNames>username</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="365" parent="355" name="UNIQ_8D93D64935C246D5">
+    <index id="363" parent="355" name="UNIQ_8D93D64935C246D5">
       <ColNames>password</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="366" parent="355" name="UNIQ_8D93D649444F97DD">
+    <index id="364" parent="355" name="UNIQ_8D93D649444F97DD">
       <ColNames>phone</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="367" parent="355" name="UNIQ_8D93D649E7927C74">
+    <index id="365" parent="355" name="UNIQ_8D93D649E7927C74">
       <ColNames>email</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="368" parent="355" name="PRIMARY">
+    <key id="366" parent="355" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="369" parent="355" name="UNIQ_8D93D649F85E0677">
+    <key id="367" parent="355" name="UNIQ_8D93D649F85E0677">
       <ColNames>username</ColNames>
       <UnderlyingIndexName>UNIQ_8D93D649F85E0677</UnderlyingIndexName>
     </key>
-    <key id="370" parent="355" name="UNIQ_8D93D64935C246D5">
+    <key id="368" parent="355" name="UNIQ_8D93D64935C246D5">
       <ColNames>password</ColNames>
       <UnderlyingIndexName>UNIQ_8D93D64935C246D5</UnderlyingIndexName>
     </key>
-    <key id="371" parent="355" name="UNIQ_8D93D649444F97DD">
+    <key id="369" parent="355" name="UNIQ_8D93D649444F97DD">
       <ColNames>phone</ColNames>
       <UnderlyingIndexName>UNIQ_8D93D649444F97DD</UnderlyingIndexName>
     </key>
-    <key id="372" parent="355" name="UNIQ_8D93D649E7927C74">
+    <key id="370" parent="355" name="UNIQ_8D93D649E7927C74">
       <ColNames>email</ColNames>
       <UnderlyingIndexName>UNIQ_8D93D649E7927C74</UnderlyingIndexName>
     </key>
