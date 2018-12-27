@@ -4,6 +4,7 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * User
@@ -23,6 +24,12 @@ class User implements UserInterface
     private $id;
 
     /**
+     * @Assert\NotNull()
+     * @Assert\Email(
+     *     message = "The email is not a valid.",
+     *     checkMX = true
+     * )
+     *
      * @var string
      *
      * @ORM\Column(name="email", type="string", length=255, unique=true)
@@ -30,6 +37,15 @@ class User implements UserInterface
     private $email;
 
     /**
+     * @Assert\NotNull()
+     * @Assert\Regex("/^[a-z0-9]+$/")
+     * @Assert\Length(
+     *      min = 6,
+     *      max = 10,
+     *      minMessage = "Your password must be at least {{ 6 }} characters long",
+     *      maxMessage = "Your password cannot be longer than {{ 10 }} characters"
+     * )
+     *
      * @var string
      *
      * @ORM\Column(name="password", type="string", length=255, unique=true)
@@ -37,6 +53,15 @@ class User implements UserInterface
     private $password;
 
     /**
+     * @Assert\NotNull()
+     * @Assert\Regex("/^[a-zA-Z]+$/")
+     * @Assert\Length(
+     *      min = 4,
+     *      max = 30,
+     *      minMessage = "Your full name must be at least {{ 4 }} characters long",
+     *      maxMessage = "Your full name cannot be longer than {{ 30 }} characters"
+     * )
+     *
      * @var string
      *
      * @ORM\Column(name="fullName", type="string", length=255)
@@ -44,6 +69,7 @@ class User implements UserInterface
     private $fullName;
 
     /**
+     * @Assert\NotNull()
      * @var string
      *
      * @ORM\Column(name="address", type="string", length=255)
@@ -51,6 +77,9 @@ class User implements UserInterface
     private $address;
 
     /**
+     * @Assert\NotNull()
+     * @Assert\Regex("/^[0-9]{9,12}$/")
+     *
      * @var string
      *
      * @ORM\Column(name="phone", type="string", length=255, unique=true)
