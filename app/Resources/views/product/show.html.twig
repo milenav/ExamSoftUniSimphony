@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <br>
+    <br>
+    <h1>Product</h1>
+
+
+
+    <div class="list-group">
+        <input type="hidden" value="{{ product.id }}">
+        Title: <a href="#" class="list-group-item active">{{ product.title }}</a><br>
+        Material: <a href="#" class="list-group-item list-group-item-action">{{ product.material }}</a><br>
+        Size: <a href="#" class="list-group-item list-group-item-action">{{ product.size }}</a><br>
+        Price: <a href="#" class="list-group-item list-group-item-action">{{ product.price }}</a><br>
+    </div>
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <a type="button" class="btn btn-primary" href="{{ path('product_edit', {'id': product.id}) }}">Edit</a>
+        <a type="button" class="btn btn-secondary" href="{{ path('product_index') }}">Back to the gallery</a>
+        {{ form_start(delete_form) }}
+        <input class="btn btn-danger" type="submit" value="Delete">
+        {{ form_end(delete_form) }}
+    </div>
+    <br>
+    <br>
+    <br>
+
+{% endblock %}

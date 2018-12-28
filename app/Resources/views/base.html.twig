@@ -36,6 +36,19 @@
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('product_index') }}">Gallery</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Categories
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="{{ path('product_category') }}">Graphics</a>
+                            <a class="dropdown-item" href="{{ path('product_category') }}">Painting</a>
+                            <a class="dropdown-item" href="{{ path('product_category') }}">Sculpture</a>
+                        </div>
+                    </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path('user_profile') }}">Profile</a>
                 </li>
