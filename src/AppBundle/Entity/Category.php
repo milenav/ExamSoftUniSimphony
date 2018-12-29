@@ -93,6 +93,11 @@ class Category
     }
     // addProduct() and removeProduct() were also added
 
+    public function __toString()
+    {
+        return $this->name;
+    }
+
 
 }
 
