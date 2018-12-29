@@ -24,6 +24,7 @@ class Category
     private $id;
 
     /**
+     * @var ArrayCollection
      * @ORM\OneToMany(targetEntity="AppBundle\Entity\Product", mappedBy="category")
      */
     private $product;
@@ -36,7 +37,7 @@ class Category
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=255, unique=true)
+     * @ORM\Column(name="name", type="string", length=255)
      */
     private $name;
 
@@ -76,17 +77,22 @@ class Category
     }
 
     /**
-     * @return Collection|Product[]
+     * @return ArrayCollection
      */
     public function getProduct()
     {
         return $this->product;
     }
+
+    /**
+     * @param ArrayCollection $product
+     */
+    public function setProduct($product)
+    {
+        $this->product[] = $product;
+    }
     // addProduct() and removeProduct() were also added
 
-    public function __toString()
-    {
-        return $this->name;
-    }
+
 }
 

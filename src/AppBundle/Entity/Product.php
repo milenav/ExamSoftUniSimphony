@@ -22,6 +22,13 @@ class Product
     private $id;
 
     /**
+     * @var User
+     *
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", inversedBy="product")
+     */
+    private $user;
+
+    /**
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Category", inversedBy="product")
      */
     private $category;
@@ -208,10 +215,10 @@ class Product
     }
 
     /**
-     * @param mixed $category
+     * @param Category $category
      * @return Product
      */
-    public function setCategory($category)
+    public function setCategory(Category $category)
     {
         $this->category = $category;
 
@@ -232,6 +239,25 @@ class Product
     public function setNote($note)
     {
         $this->note = $note;
+    }
+
+    /**
+     * @return User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * @param User $user
+     * @return Product
+     */
+    public function setUser(User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
     }
 }
 

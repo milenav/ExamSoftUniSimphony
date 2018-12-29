@@ -44,8 +44,10 @@ class ProductController extends Controller
         $product = new Product();
         $form = $this->createForm('AppBundle\Form\ProductType', $product);
         $form->handleRequest($request);
-
         if ($form->isSubmitted() && $form->isValid()) {
+            $currentUser = $this->getUser();
+            $product->setUser($currentUser);
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($product);
             $em->flush();
@@ -53,10 +55,10 @@ class ProductController extends Controller
             return $this->redirectToRoute('product_show', array('id' => $product->getId()));
         }
 
-        return $this->render('product/new.html.twig', array(
-            'product' => $product,
-            'form' => $form->createView(),
-        ));
+        return $this->render('product/new.html.twig',
+            /*'product' => $product,*/
+            ['form' => $form->createView()]);
+
     }
 
     /**
@@ -110,6 +112,9 @@ class ProductController extends Controller
      *
      * @Route("/{id}", name="product_delete")
      * @Method("DELETE")
+     * @param Request $request
+     * @param Product $product
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
     public function deleteAction(Request $request, Product $product)
     {

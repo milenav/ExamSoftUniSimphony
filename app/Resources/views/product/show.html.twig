@@ -3,24 +3,30 @@
 {% block body %}
     <br>
     <br>
-    <h1>Product</h1>
+    <br>
+    {% if app.user %}
 
-
-
-    <div class="list-group">
+    <div class="card" style="width: 30rem;">
+        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="">
+    </div>
+        <div class="card" style="width: 30rem;">
         <input type="hidden" value="{{ product.id }}">
-        Title: <a href="#" class="list-group-item active">{{ product.title }}</a><br>
-        Material: <a href="#" class="list-group-item list-group-item-action">{{ product.material }}</a><br>
-        Size: <a href="#" class="list-group-item list-group-item-action">{{ product.size }}</a><br>
-        Price: <a href="#" class="list-group-item list-group-item-action">{{ product.price }}</a><br>
+        <div class="card-body">
+            <h5 class="card-title">{{ product.title }}</h5>
+            <p class="card-text">{{ product.note }}dffffffffffffffffffffffffff</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Material: {{ product.material }}</li>
+            <li class="list-group-item">Size: {{ product.size }}</li>
+            <li class="list-group-item">Price: {{ product.price }}</li>
+        </ul>
+        <div class="card-body">
+            <a href="{{ path('product_edit', {'id': product.id}) }}" class="card-link">Edit</a>
+            <a href="{{ path('product_index') }}" class="card-link">Back to the gallery</a>
+            <a href="{{ path('product_delete', {'id' :product.id}) }}" class="card-link">Delete</a>
+        </div>
     </div>
-    <div class="btn-group" role="group" aria-label="Basic example">
-        <a type="button" class="btn btn-primary" href="{{ path('product_edit', {'id': product.id}) }}">Edit</a>
-        <a type="button" class="btn btn-secondary" href="{{ path('product_index') }}">Back to the gallery</a>
-        {{ form_start(delete_form) }}
-        <input class="btn btn-danger" type="submit" value="Delete">
-        {{ form_end(delete_form) }}
-    </div>
+{% endif %}
     <br>
     <br>
     <br>

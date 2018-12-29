@@ -11,7 +11,7 @@
       <user-name>root</user-name>
       <introspection-schemas>*:art_gallery</introspection-schemas>
     </data-source>
-    <data-source name="@localhost [2]" uuid="7b5b4e1c-b1c3-40bc-a2f4-797c841efdf8">
+    <data-source name="@localhost [4]" uuid="afc59011-8796-494a-a3bf-8a7635f3f648">
       <database-info product="MySQL" version="5.5.5-10.3.10-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )" family="MARIADB" exact-version="5.5.5">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
@@ -19,17 +19,7 @@
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
-      <introspection-schemas>*:@</introspection-schemas>
-    </data-source>
-    <data-source name="@localhost [3]" uuid="3477b576-dee4-4751-a269-d3d4851339f9">
-      <database-info product="MySQL" version="5.5.5-10.3.10-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )" family="MARIADB" exact-version="5.5.5">
-        <extra-name-characters>#@</extra-name-characters>
-        <identifier-quote-string>`</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
-      <secret-storage>master_key</secret-storage>
-      <user-name>root</user-name>
-      <introspection-schemas>*:@</introspection-schemas>
+      <introspection-schemas>*:art_gallery</introspection-schemas>
     </data-source>
   </component>
 </project>

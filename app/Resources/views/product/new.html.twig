@@ -1,7 +1,10 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Product creation</h1>
+    <br>
+    <br>
+
+   {# <h1>Product creation</h1>
 
     {{ form_start(form) }}
         {{ form_widget(form) }}
@@ -12,5 +15,55 @@
         <li>
             <a href="{{ path('product_index') }}">Back to the list</a>
         </li>
-    </ul>
+    </ul>#}
+
+    <form style="width: 30rem;" action="{{ path('product_new') }}" method="post">
+        <div class="form-group">
+            <label for="product_title" class="required">Title</label>
+            <input name="product[title]" type="text" class="form-control" id="product_title" required="required" placeholder="Enter title">
+        </div>
+
+        <div class="form-group">
+            <label for="product_category" class="required">Category</label>
+            <select name="product[category]" id="product_category" class="form-control">
+                <option selected>Choose...</option>
+                <option>Graphics</option>
+                <option>Painting</option>
+                <option>Sculpture</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="product_size" class="required">Size</label>
+            <input name="product[size]" type="text" class="form-control" id="product_size" required="required" placeholder="Enter size">
+        </div>
+
+        <div class="form-group">
+            <label for="product_material" class="required">Material</label>
+            <input name="product[material]" type="text" class="form-control" id="product_material" required="required" placeholder="Enter material">
+        </div>
+
+        <div class="form-group">
+            <label for="product_price" class="required">Price</label>
+            <input name="product[price]" type="number" class="form-control" id="product_price" required="required" placeholder="Enter price">
+        </div>
+
+        <div class="form-group">
+                <label for="product_picture">Picture file input</label>
+                <input name="product[picture]" type="file" class="form-control-file" id="product_picture">
+        </div>
+        <br>
+
+        {{ form_row(form._token) }}
+
+        <div style="width: 30rem;">
+        <input type="submit" class="btn btn-primary" value="Create" />
+        <a href="{{ path('product_index') }}">Back to the gallery</a>
+        </div>
+
+    </form>
+
+    <br>
+    <br>
+    <br>
 {% endblock %}
