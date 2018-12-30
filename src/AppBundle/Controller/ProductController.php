@@ -3,6 +3,7 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Product;
+use AppBundle\Form\ProductType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
@@ -42,8 +43,9 @@ class ProductController extends Controller
     public function newAction(Request $request)
     {
         $product = new Product();
-        $form = $this->createForm('AppBundle\Form\ProductType', $product);
+        $form = $this->createForm(ProductType::class, $product);
         $form->handleRequest($request);
+        $categories = $this->getDoctrine()->getRepository('AppBundle:Category')->findAll();
         if ($form->isSubmitted() && $form->isValid()) {
             $currentUser = $this->getUser();
             $product->setUser($currentUser);
@@ -57,7 +59,9 @@ class ProductController extends Controller
 
         return $this->render('product/new.html.twig',
             /*'product' => $product,*/
-            ['form' => $form->createView()]);
+            /*'categories' => $categories,*/
+            ['form' => $form->createView(),
+                'categories' => $categories]);
 
     }
 

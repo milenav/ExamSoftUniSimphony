@@ -26,10 +26,8 @@ class ProductType extends AbstractType
             ->add('picture', TextType::class)
             ->add('category', EntityType::class,
                 [
-                    'multiple' => true,
                     'expanded' => true,
                     'class' => Category::class,
-                    'mapped' => false
                 ]);
     }
 

@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b18df83-20e2-431d-ac9f-2597585ef3e2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3477b576-dee4-4751-a269-d3d4851339f9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7b5b4e1c-b1c3-40bc-a2f4-797c841efdf8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed7b3c29-eb50-4f15-8b7b-56cac9e68c3f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ed7b3c29-eb50-4f15-8b7b-56cac9e68c3f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/product/category.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/product/category.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/product/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/product/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/product/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/product/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ProductController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Form/CategoryType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Form/CategoryType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Form/ProductType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Form/ProductType.php" afterDir="false" />
     </list>
@@ -50,50 +56,7 @@
         <item name="@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="art_gallery: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="authors: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="art_gallery: schema" type="c314c289:MysqlImplModel$Schema" />
         <item name="categories: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost [4]" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost [4]" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost [4]" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="art_gallery: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost [4]" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="art_gallery: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="authors: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost [4]" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="art_gallery: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="categories: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost [4]" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="art_gallery: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="products: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -102,7 +65,7 @@
     <session id="840272247">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.312" value="1" />
           <entry key="project.open.time.44" value="1" />
@@ -114,31 +77,31 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="SCHEMA:art_gallery" value="1" />
-          <entry key="categories" value="4" />
+          <entry key="categories" value="5" />
           <entry key="console" value="1" />
           <entry key="css" value="8" />
           <entry key="customers" value="1" />
           <entry key="dist" value="1" />
           <entry key="js" value="2" />
           <entry key="json" value="1" />
-          <entry key="php" value="72" />
-          <entry key="products" value="7" />
+          <entry key="php" value="90" />
+          <entry key="products" value="10" />
           <entry key="sql" value="4" />
           <entry key="symfony_requirements" value="1" />
-          <entry key="twig" value="43" />
+          <entry key="twig" value="50" />
           <entry key="yml" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="8" />
-          <entry key="Database Element" value="12" />
+          <entry key="Database Element" value="16" />
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="2" />
-          <entry key="PHP" value="74" />
+          <entry key="PHP" value="92" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Scratch" value="4" />
-          <entry key="Twig" value="43" />
+          <entry key="Twig" value="50" />
           <entry key="UML" value="1" />
           <entry key="YAML" value="21" />
         </counts>
@@ -147,18 +110,55 @@
         <counts>
           <entry key="css" value="82" />
           <entry key="dummy" value="18" />
-          <entry key="php" value="2488" />
-          <entry key="twig" value="2765" />
+          <entry key="php" value="2938" />
+          <entry key="twig" value="2950" />
           <entry key="yml" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="82" />
-          <entry key="PHP" value="2488" />
+          <entry key="PHP" value="2938" />
           <entry key="PLAIN_TEXT" value="18" />
-          <entry key="Twig" value="2765" />
+          <entry key="Twig" value="2950" />
           <entry key="YAML" value="46" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-1557728412">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="categories" value="3" />
+          <entry key="php" value="3" />
+          <entry key="sql" value="3" />
+          <entry key="twig" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Database Element" value="3" />
+          <entry key="PHP" value="3" />
+          <entry key="SQL" value="1" />
+          <entry key="Scratch" value="2" />
+          <entry key="Twig" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="php" value="203" />
+          <entry key="twig" value="120" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PHP" value="203" />
+          <entry key="Twig" value="120" />
         </counts>
       </usages-collector>
     </session>
@@ -166,22 +166,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/product/show.html.twig">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/CategoryType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
+            <state relative-caret-position="200">
+              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#35#75#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/product/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="55" column="15" selection-start-line="55" selection-start-column="15" selection-end-line="55" selection-end-column="83" />
             </state>
           </provider>
         </entry>
@@ -189,53 +180,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ProductController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="50" column="53" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Product.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="225" column="5" selection-start-line="225" selection-start-column="5" selection-end-line="225" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Category.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="97" column="27" selection-start-line="97" selection-start-column="27" selection-end-line="97" selection-end-column="27" />
+            <state relative-caret-position="219">
+              <caret line="45" column="52" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
               <folding>
-                <element signature="e#36#84#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/UserController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="12" selection-start-line="12" selection-end-line="51" selection-end-column="1" />
-              <folding>
-                <element signature="e#42#68#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/CategoryController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
-              <folding>
-                <element signature="e#40#97#0#PHP" expanded="true" />
-                <element signature="e#388#416#1#PHP" expanded="true" />
+                <element signature="e#40#69#0#PHP" expanded="true" />
+                <element signature="e#1765#1788#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -244,8 +193,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/ProductType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+            <state relative-caret-position="-40">
+              <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
               <folding>
                 <element signature="e#35#65#0#PHP" expanded="true" />
               </folding>
@@ -254,24 +203,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/CategoryType.php">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/product/category.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-              <folding>
-                <element signature="e#34#67#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="426">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/product/new.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/product/new.html.twig">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/CategoryController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+            <state relative-caret-position="233">
+              <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
               <folding>
-                <element signature="e#12#26#0#Twig" expanded="true" />
+                <element signature="e#40#70#0#PHP" expanded="true" />
+                <element signature="e#1024#1052#1#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -288,6 +244,7 @@
       <find>customer</find>
       <find>.form-group</find>
       <find>form</find>
+      <find>products</find>
     </findStrings>
     <replaceStrings>
       <replace>AppBundle</replace>
@@ -318,22 +275,22 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Author.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/product/product.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/user/profile.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/CategoryController.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/product/index.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/product/category.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/UserType.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/security/login.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/user/register.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/product/edit.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/User.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/ProductController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Product.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/product/show.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Form/CategoryType.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Form/ProductType.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Category.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Form/ProductType.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Form/CategoryType.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/product/category.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/ProductController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/CategoryController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/product/new.html.twig" />
       </list>
     </option>
@@ -393,9 +350,9 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="102" />
-    <option name="y" value="7" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="190" />
+    <option name="y" value="130" />
     <option name="width" value="975" />
     <option name="height" value="677" />
   </component>
@@ -404,106 +361,76 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="ExamSoftUniSimphony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ExamSoftUniSimphony" type="462c0819:PsiDirectoryNode" />
+              <item name="ExamSoftUniSimphony - Copy (4)" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ExamSoftUniSimphony - Copy (4)" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ExamSoftUniSimphony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ExamSoftUniSimphony" type="462c0819:PsiDirectoryNode" />
+              <item name="ExamSoftUniSimphony - Copy (4)" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ExamSoftUniSimphony - Copy (4)" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ExamSoftUniSimphony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ExamSoftUniSimphony" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ExamSoftUniSimphony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ExamSoftUniSimphony" type="462c0819:PsiDirectoryNode" />
+              <item name="ExamSoftUniSimphony - Copy (4)" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ExamSoftUniSimphony - Copy (4)" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ExamSoftUniSimphony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ExamSoftUniSimphony" type="462c0819:PsiDirectoryNode" />
+              <item name="ExamSoftUniSimphony - Copy (4)" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ExamSoftUniSimphony - Copy (4)" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="default" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ExamSoftUniSimphony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ExamSoftUniSimphony" type="462c0819:PsiDirectoryNode" />
+              <item name="ExamSoftUniSimphony - Copy (4)" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ExamSoftUniSimphony - Copy (4)" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
+              <item name="product" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ExamSoftUniSimphony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ExamSoftUniSimphony" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ExamSoftUniSimphony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ExamSoftUniSimphony" type="462c0819:PsiDirectoryNode" />
+              <item name="ExamSoftUniSimphony - Copy (4)" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ExamSoftUniSimphony - Copy (4)" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ExamSoftUniSimphony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ExamSoftUniSimphony" type="462c0819:PsiDirectoryNode" />
+              <item name="ExamSoftUniSimphony - Copy (4)" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ExamSoftUniSimphony - Copy (4)" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ExamSoftUniSimphony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ExamSoftUniSimphony" type="462c0819:PsiDirectoryNode" />
+              <item name="ExamSoftUniSimphony - Copy (4)" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ExamSoftUniSimphony - Copy (4)" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ExamSoftUniSimphony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ExamSoftUniSimphony" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ExamSoftUniSimphony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ExamSoftUniSimphony" type="462c0819:PsiDirectoryNode" />
+              <item name="ExamSoftUniSimphony - Copy (4)" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ExamSoftUniSimphony - Copy (4)" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Form" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ExamSoftUniSimphony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ExamSoftUniSimphony" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Repository" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="C:/Data/blog" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.composer" />
@@ -540,18 +467,19 @@
       <workItem from="1545915917470" duration="9706000" />
       <workItem from="1545929260534" duration="5210000" />
       <workItem from="1545978146891" duration="29701000" />
-      <workItem from="1546062404578" duration="25650000" />
+      <workItem from="1546062404578" duration="41369000" />
+      <workItem from="1546178972742" duration="5490000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82035000" />
+    <option name="totallyTimeSpent" value="103244000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17397882" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1452345" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -566,11 +494,11 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.30441898" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Database Console" order="12" weight="0.3283582" />
+      <window_info anchor="bottom" id="Database Console" order="12" weight="0.32733223" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32694063" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32568306" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -580,42 +508,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/AppCache.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/console">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-82" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/symfony_requirements">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-540" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/AppBundle.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/theme/css/heroic-features.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/theme/vendor/bootstrap/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38180">
-          <caret line="1909" selection-start-line="1909" selection-end-line="1909" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/theme/vendor/bootstrap/css/bootstrap-grid.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/theme/vendor/bootstrap/css/bootstrap-reboot.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5400">
@@ -688,13 +580,6 @@
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/AdjustmentLineRepository.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Adjustment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-714">
@@ -702,24 +587,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/UserRepository.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/SecurityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://ed7b3c29-eb50-4f15-8b7b-56cac9e68c3f/schema/art_gallery/table/products">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ed7b3c29-eb50-4f15-8b7b-56cac9e68c3f/schema/art_gallery/table/categories">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -744,61 +612,10 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/afc59011-8796-494a-a3bf-8a7635f3f648/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/product/category.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-          <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/security/login.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-          <folding>
-            <element signature="e#95#116#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="31" column="28" selection-start-line="4" selection-end-line="31" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/FormView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-760">
-          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/product/edit.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="48" column="100" selection-start-line="48" selection-start-column="91" selection-end-line="48" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://afc59011-8796-494a-a3bf-8a7635f3f648/schema/art_gallery/table/categories">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -806,9 +623,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-          <folding>
-            <element signature="e#86#107#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -819,23 +633,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/UserType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="294" column="16" selection-start-line="294" selection-start-column="16" selection-end-line="294" selection-end-column="16" />
-          <folding>
-            <element signature="e#36#84#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Author.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-780">
@@ -843,30 +640,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://afc59011-8796-494a-a3bf-8a7635f3f648/schema/art_gallery/table/categories">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="31" column="28" selection-start-line="4" selection-end-line="31" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/product/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
+        <state relative-caret-position="4500">
           <caret line="225" column="5" selection-start-line="225" selection-start-column="5" selection-end-line="225" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/UserController.php">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/product/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="12" selection-start-line="12" selection-end-line="51" selection-end-column="1" />
-          <folding>
-            <element signature="e#42#68#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="175">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/CategoryController.php">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/security/login.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
+        <state relative-caret-position="80">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/CategoryRepository.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/AuthorRepository.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/UserRepository.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/ProductRepository.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/UserType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-40">
+          <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5820">
+          <caret line="294" column="16" selection-start-line="294" selection-start-column="16" selection-end-line="294" selection-end-column="16" />
           <folding>
-            <element signature="e#40#97#0#PHP" expanded="true" />
-            <element signature="e#388#416#1#PHP" expanded="true" />
+            <element signature="e#36#84#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -878,67 +718,144 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/ProductType.php">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/SecurityController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+          <folding>
+            <element signature="e#40#97#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+          <folding>
+            <element signature="e#42#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="97" column="27" selection-start-line="97" selection-start-column="27" selection-end-line="97" selection-end-column="27" />
+          <folding>
+            <element signature="e#36#84#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/CategoryType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding>
+            <element signature="e#35#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/FormView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0e8c9503-5253-4a30-b310-e0c2e0f09c29/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://0e8c9503-5253-4a30-b310-e0c2e0f09c29/schema/art_gallery/table/categories.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://0e8c9503-5253-4a30-b310-e0c2e0f09c29/schema/art_gallery/table/categories">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://ed7b3c29-eb50-4f15-8b7b-56cac9e68c3f/schema/art_gallery/table/categories">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/13f00eb7-85ba-4e9c-bbdf-e4c3bfdc051a/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/product/category.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/ProductType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-40">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
           <folding>
             <element signature="e#35#65#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/CategoryType.php">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ProductController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        <state relative-caret-position="219">
+          <caret line="45" column="52" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
           <folding>
-            <element signature="e#34#67#0#PHP" expanded="true" />
+            <element signature="e#40#69#0#PHP" expanded="true" />
+            <element signature="e#1765#1788#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/product/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+    <entry file="das://13f00eb7-85ba-4e9c-bbdf-e4c3bfdc051a/schema/art_gallery/table/categories">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/product/index.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/CategoryController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="55" column="15" selection-start-line="55" selection-start-column="15" selection-end-line="55" selection-end-column="83" />
+        <state relative-caret-position="233">
+          <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
+          <folding>
+            <element signature="e#40#70#0#PHP" expanded="true" />
+            <element signature="e#1024#1052#1#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/product/new.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
-          <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ProductController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="50" column="53" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="97" column="27" selection-start-line="97" selection-start-column="27" selection-end-line="97" selection-end-column="27" />
-          <folding>
-            <element signature="e#36#84#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="320">
+          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
         </state>
       </provider>
     </entry>

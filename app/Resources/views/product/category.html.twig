@@ -1,4 +1,42 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
-{% endblock %}
+    {% block body %}
+        <br>
+        <br>
+
+        {# <h1>Product creation</h1>
+
+         {{ form_start(form) }}
+             {{ form_widget(form) }}
+             <input type="submit" value="Create" />
+         {{ form_end(form) }}
+
+         <ul>
+             <li>
+                 <a href="{{ path('product_index') }}">Back to the list</a>
+             </li>
+         </ul>#}
+
+        <form style="width: 30rem;" action="{{ path('product_category') }}" method="post">
+            <div class="form-group">
+                <label for="category_name" class="required">Name</label>
+                <input name="category[name]" type="text" class="form-control" id="product_title" required="required" placeholder="Enter category name">
+            </div>
+
+
+            <br>
+
+            {{ form_row(form._token) }}
+
+            <div style="width: 30rem;">
+                <input type="submit" class="btn btn-primary" value="Create" />
+                <a class="btn btn-outline-primary" href="{{ path('gallery_index') }}">Cancel</a>
+            </div>
+
+        </form>
+
+        <br>
+        <br>
+        <br>
+    {% endblock %}
+
