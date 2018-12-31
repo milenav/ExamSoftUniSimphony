@@ -4,20 +4,7 @@
     <br>
     <br>
 
-    {# <h1>Product creation</h1>
-
-     {{ form_start(form) }}
-         {{ form_widget(form) }}
-         <input type="submit" value="Create" />
-     {{ form_end(form) }}
-
-     <ul>
-         <li>
-             <a href="{{ path('product_index') }}">Back to the list</a>
-         </li>
-     </ul>#}
-
-    <form style="width: 30rem;" action="{{ path('product_new') }}" method="post">
+    <form style="width: 30rem;" enctype="multipart/form-data" action="{{ path('product_new') }}" method="post">
         <div class="form-group">
             <label for="product_title" class="required">Title</label>
             <input name="product[title]" type="text" class="form-control" id="product_title" required="required" placeholder="Enter title">
@@ -29,7 +16,7 @@
             <select name="product[category]" id="product_category" class="form-control">
                 <option value="0" selected>Choose...</option>
                 {% for category in categories %}
-                    <option value="{{ category.name }}">{{ category.name }}</option>
+                    <option value="{{ category.id }}">{{ category.name }}</option>
                 {% endfor %}
 
             </select>

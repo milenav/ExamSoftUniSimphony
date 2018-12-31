@@ -4,19 +4,6 @@
         <br>
         <br>
 
-        {# <h1>Product creation</h1>
-
-         {{ form_start(form) }}
-             {{ form_widget(form) }}
-             <input type="submit" value="Create" />
-         {{ form_end(form) }}
-
-         <ul>
-             <li>
-                 <a href="{{ path('product_index') }}">Back to the list</a>
-             </li>
-         </ul>#}
-
         <form style="width: 30rem;" action="{{ path('product_category') }}" method="post">
             <div class="form-group">
                 <label for="category_name" class="required">Name</label>

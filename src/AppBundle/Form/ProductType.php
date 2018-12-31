@@ -6,6 +6,7 @@ namespace AppBundle\Form;
 use AppBundle\Entity\Category;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -22,12 +23,14 @@ class ProductType extends AbstractType
             ->add('title', TextType::class)
             ->add('size', TextType::class)
             ->add('material', TextType::class)
+            ->add('note', TextType::class)
             ->add('price', NumberType::class)
-            ->add('picture', TextType::class)
+            ->add('picture', FileType::class)
             ->add('category', EntityType::class,
                 [
                     'expanded' => true,
                     'class' => Category::class,
+                    'choice_label' => 'name'
                 ]);
     }
 

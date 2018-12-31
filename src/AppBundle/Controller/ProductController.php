@@ -46,7 +46,8 @@ class ProductController extends Controller
         $form = $this->createForm(ProductType::class, $product);
         $form->handleRequest($request);
         $categories = $this->getDoctrine()->getRepository('AppBundle:Category')->findAll();
-        if ($form->isSubmitted() && $form->isValid()) {
+
+        if ($form->isSubmitted()) {
             $currentUser = $this->getUser();
             $product->setUser($currentUser);
 
@@ -95,7 +96,7 @@ class ProductController extends Controller
     public function editAction(Request $request, Product $product)
     {
         $deleteForm = $this->createDeleteForm($product);
-        $editForm = $this->createForm('AppBundle\Form\ProductType', $product);
+        $editForm = $this->createForm(ProductType::class, $product);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
