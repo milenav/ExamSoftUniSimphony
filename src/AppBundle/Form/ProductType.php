@@ -3,6 +3,7 @@
 namespace AppBundle\Form;
 
 
+use AppBundle\Entity\Author;
 use AppBundle\Entity\Category;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
@@ -25,13 +26,19 @@ class ProductType extends AbstractType
             ->add('material', TextType::class)
             ->add('note', TextType::class)
             ->add('price', NumberType::class)
-            ->add('picture', FileType::class)
+            ->add('picture', TextType::class)
             ->add('category', EntityType::class,
                 [
                     'expanded' => true,
                     'class' => Category::class,
                     'choice_label' => 'name'
-                ]);
+                ])
+        ->add('author', EntityType::class,
+        [
+            'expanded' => true,
+            'class' => Author::class,
+            'choice_label' => 'name'
+        ]);
     }
 
     /**

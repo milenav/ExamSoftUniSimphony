@@ -2,6 +2,7 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -20,6 +21,17 @@ class Author
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
+
+    /**
+     * @var ArrayCollection
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Product", mappedBy="author")
+     */
+    private $product;
+
+    public function __construct()
+    {
+        $this->product = new ArrayCollection();
+    }
 
     /**
      * @var string
@@ -59,6 +71,27 @@ class Author
      * @return string
      */
     public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getProduct()
+    {
+        return $this->product;
+    }
+
+    /**
+     * @param ArrayCollection $product
+     */
+    public function setProduct($product)
+    {
+        $this->product[] = $product;
+    }
+
+    public function __toString()
     {
         return $this->name;
     }

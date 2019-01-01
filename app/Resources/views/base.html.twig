@@ -13,6 +13,9 @@
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('theme/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
+    <!-- Fontawesome template -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('fontawesome/webfonts/fa-solid-900.svg') }}" />
+
     <!-- Custom styles for this template -->
     <link href="{{ asset('theme/css/heroic-features.css') }}" rel="stylesheet">
 {% block stylesheets %}
@@ -24,7 +27,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="{{ path('gallery_index') }}">Art Gallery</a>
+        <a class="navbar-brand" href="{{ path('gallery_index') }}"><i class="fa fa-palette"></i> Art Gallery</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -39,14 +42,20 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ path('product_index') }}">Gallery</a>
                     </li>
-
+                {% if app.getUser() and app.getUser().isAdmin() %}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ path('product_new') }}">New Product</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="{{ path('product_category') }}">New Category</a>
                     </li>
 
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('product_author') }}">New Author</a>
+                    </li>
+                {% endif %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Categories
@@ -58,7 +67,7 @@
                         </div>
                     </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path('user_profile') }}">Profile</a>
+                    <a class="nav-link" href="{{ path('user_profile') }}"><i class="fas fa-shopping-cart"></i></a>
                 </li>
                     {#<li class="nav-item">
                         <a class="nav-link" href="#">Gallery</a>
@@ -99,7 +108,8 @@
 
 <!-- Bootstrap core JavaScript -->
 <script src="{{ asset('theme/vendor/jquery/jquery.min.js') }}"></script>
-<script src="{{ asset('theme/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('theme/vendor/bootstrap/js/bootstrap.bundle.min.js') }}">
+</script><script src="{{ asset('fontawesome/js/all.min.js') }}"></script>
 {% block javascripts %}
 {% endblock %}
 </body>

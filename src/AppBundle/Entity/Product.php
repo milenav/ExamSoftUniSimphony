@@ -34,6 +34,16 @@ class Product
     private $category;
 
     /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Author", inversedBy="product")
+     */
+    private $author;
+
+    /**
+     * @var string
+     */
+    private $summary;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="title", type="string", length=255, unique=true)
@@ -258,6 +268,43 @@ class Product
         $this->user = $user;
 
         return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAuthor()
+    {
+        return $this->author;
+    }
+
+    /**
+     * @param Author $author
+     * @return Product
+     */
+    public function setAuthor(Author $author)
+    {
+        $this->author = $author;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSummary()
+    {
+        if ($this->summary === null){
+            $this->setSummary();
+        }
+        return $this->summary;
+    }
+
+    public function setSummary()
+    {
+        $this->summary = substr($this->getNote(), 0,
+            strlen($this->getNote()) / 2
+        ) . "...";
     }
 }
 

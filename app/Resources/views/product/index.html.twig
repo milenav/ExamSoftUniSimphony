@@ -10,10 +10,16 @@
         {% for product in products %}
         <div class="col-lg-3 col-md-6 mb-4">
             <div class="card">
-                <img class="card-img-top" src="{{ product.picture }}" alt="" width="500" height="325">
+                <img class="card-img-top" src="{{ product.picture }}">
                 <div class="card-body">
                     <h4 class="card-title">{{ product.title }}</h4>
-                    <p class="card-text">{{ product.note }}</p>
+                    <h6 class="card-title">{{ product.author }}</h6>
+                    <p class="card-text">{{ product.summary }}</p>
+                        <div class="pull-right" style="font-size: smaller">
+                            <a class="card-link" href="{{ path('product_show', {'id': product.id}) }}">Read more &raquo;</a>
+                        </div>
+                    <br>
+
                     <h3 class="card-title">{{ product.price }}$</h3>
                 </div>
                 <div class="card-footer">

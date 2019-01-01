@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+    {% block body %}
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <form style="width: 30rem;" action="{{ path('product_author') }}" method="post">
+            <div class="form-group">
+                <label for="author_name" class="required">Name</label>
+                <input name="author[name]" type="text" class="form-control" required="required" placeholder="Enter author name">
+            </div>
+
+
+            <br>
+
+            {{ form_row(form._token) }}
+
+            <div style="width: 30rem;">
+                <input type="submit" class="btn btn-primary" value="Create" />
+                <a class="btn btn-outline-primary" href="{{ path('gallery_index') }}">Cancel</a>
+            </div>
+
+        </form>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    {% endblock %}
+

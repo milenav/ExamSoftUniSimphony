@@ -3,7 +3,9 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Product;
+use AppBundle\Entity\User;
 use AppBundle\Form\ProductType;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
@@ -36,6 +38,7 @@ class ProductController extends Controller
      * Creates a new product entity.
      *
      * @Route("/new", name="product_new")
+     * @Security("is_granted('IS_AUTHENTICATED_FULLY')")
      * @Method({"GET", "POST"})
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
@@ -46,6 +49,7 @@ class ProductController extends Controller
         $form = $this->createForm(ProductType::class, $product);
         $form->handleRequest($request);
         $categories = $this->getDoctrine()->getRepository('AppBundle:Category')->findAll();
+        $authors = $this->getDoctrine()->getRepository('AppBundle:Author')->findAll();
 
         if ($form->isSubmitted()) {
             $currentUser = $this->getUser();
@@ -62,7 +66,8 @@ class ProductController extends Controller
             /*'product' => $product,*/
             /*'categories' => $categories,*/
             ['form' => $form->createView(),
-                'categories' => $categories]);
+                'categories' => $categories,
+                'authors' => $authors]);
 
     }
 
@@ -76,18 +81,17 @@ class ProductController extends Controller
      */
     public function showAction(Product $product)
     {
-        $deleteForm = $this->createDeleteForm($product);
 
         return $this->render('product/show.html.twig', array(
-            'product' => $product,
-            'delete_form' => $deleteForm->createView(),
+            'product' => $product
         ));
     }
 
-    /**
+     /**
      * Displays a form to edit an existing product entity.
      *
      * @Route("/{id}/edit", name="product_edit")
+     * @Security("is_granted('IS_AUTHENTICATED_FULLY')")
      * @Method({"GET", "POST"})
      * @param Request $request
      * @param Product $product
@@ -95,59 +99,84 @@ class ProductController extends Controller
      */
     public function editAction(Request $request, Product $product)
     {
-        $deleteForm = $this->createDeleteForm($product);
-        $editForm = $this->createForm(ProductType::class, $product);
-        $editForm->handleRequest($request);
+        $form = $this->createForm(ProductType::class, $product);
+        $form->handleRequest($request);
+        $categories = $this->getDoctrine()->getRepository('AppBundle:Category')->findAll();
+        $authors = $this->getDoctrine()->getRepository('AppBundle:Author')->findAll();
 
-        if ($editForm->isSubmitted() && $editForm->isValid()) {
+        if ($product === null){
+            return $this->redirectToRoute("product_index");
+        }
+
+        /**@var User $currentUser*/
+        $currentUser = $this->getUser();
+
+        if (!$currentUser->isAuthor($product) && !$currentUser->isAdmin()){
+            return $this->redirectToRoute("product_index");
+        }
+
+
+        if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('product_edit', array('id' => $product->getId()));
+            return $this->redirectToRoute('product_index', array('id' => $product->getId()));
         }
 
         return $this->render('product/edit.html.twig', array(
             'product' => $product,
-            'edit_form' => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
+            'categories' => $categories,
+            'authors' => $authors,
+            'form' => $form->createView()
         ));
     }
 
+
     /**
-     * Deletes a product entity.
-     *
-     * @Route("/{id}", name="product_delete")
-     * @Method("DELETE")
+     * @Route("/delete/{id}", name="product_delete")
+     * @Security("is_granted('IS_AUTHENTICATED_FULLY')")
+     * @param $id
      * @param Request $request
-     * @param Product $product
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function deleteAction(Request $request, Product $product)
+    public function deleteAction($id, Request $request)
     {
-        $form = $this->createDeleteForm($product);
+        $product = $this->getDoctrine()->getRepository(Product::class)->find($id);
+        $categories = $this->getDoctrine()->getRepository('AppBundle:Category')->findAll();
+        $authors = $this->getDoctrine()->getRepository('AppBundle:Author')->findAll();
+
+        if ($product === null){
+            return $this->redirectToRoute("product_index");
+        }
+
+        /**@var User $currentUser*/
+        $currentUser = $this->getUser();
+
+        if (!$currentUser->isAuthor($product) && !$currentUser->isAdmin()){
+            return $this->redirectToRoute("product_index");
+        }
+
+        if ($product === null){
+            return $this->redirectToRoute("product_index");
+        }
+
+        $form = $this->createForm(ProductType::class, $product);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()){
             $em = $this->getDoctrine()->getManager();
             $em->remove($product);
             $em->flush();
+
+            return $this->redirectToRoute("product_index");
         }
-
-        return $this->redirectToRoute('product_index');
+        return $this->render('product/delete.html.twig', array(
+            'product' => $product,
+            'categories' => $categories,
+            'authors' => $authors,
+            'form' => $form->createView()
+        ));
     }
 
-    /**
-     * Creates a form to delete a product entity.
-     *
-     * @param Product $product The product entity
-     *
-     * @return \Symfony\Component\Form\Form The form
-     */
-    private function createDeleteForm(Product $product)
-    {
-        return $this->createFormBuilder()
-            ->setAction($this->generateUrl('product_delete', array('id' => $product->getId())))
-            ->setMethod('DELETE')
-            ->getForm()
-        ;
-    }
+
+
 }
