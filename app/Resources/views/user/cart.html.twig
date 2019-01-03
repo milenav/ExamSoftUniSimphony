@@ -1,15 +1,39 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Hello, {{ user.fullName }}</h1>
+    <h2 id="hello">Hello, {{ user.fullName }}!</h2>
 
-
+    {% if not products %}
+        <h4 id="not"><i class="fa fa-shopping-basket"></i>   Your basket is empty!</h4>
+    {% endif %}
+    {% set total = 0 %}
+    {% for product in products %}
+        {% set total = total + product.product.price * product.count %}
+        <div class="list-group">
+            <h5 class="list-group-item active">
+               Title: {{ product.product.title }}
+            </h5>
+            <p class="list-group-item">Count: {{ product.count }}</p>
+            <p class="list-group-item">Price: {{ product.product.price * product.count }}</p>
+        </div>
+        <div class="push"></div>
+    {% endfor %}
+    <div class="list-group">
+        <h5 class="list-group-item active">Total price: {{ total }}</h5>
+    </div>
     {% block stylesheets %}
         <style>
-            h1{
-                padding: 144px 40px 160px 40px;
-                margin-left: 300px;
+            #hello{
+                padding-top: 50px;
             }
+            .list-group{
+                padding: 20px 10px 20px 10px;
+                margin: 5px 200px 50px 500px;
+            }
+            #not{
+                margin: 40px 0 295px 0;
+            }
+
         </style>
 
     {% endblock %}

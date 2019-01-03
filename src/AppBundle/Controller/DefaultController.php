@@ -15,8 +15,15 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $products = $this->getDoctrine()->getRepository('AppBundle:Product')->findAll();
+        $catId = $request->query->get('catId');
 
+        if ($catId) {
+            $products = $this->getDoctrine()->getRepository('AppBundle:Product')->findBy(['category' => $catId ]);
+        } else {
+            $products = $this->getDoctrine()->getRepository('AppBundle:Product')->findAll();
+        }
+
+        $products = array_slice($products, 0, min(4, count($products)));
 
         // replace this example code with whatever you need
         return $this->render('default/index.html.twig', [

@@ -2,8 +2,6 @@
 
 namespace AppBundle\Controller;
 
-
-
 use AppBundle\Entity\Role;
 use AppBundle\Entity\User;
 use AppBundle\Form\UserType;
@@ -11,8 +9,18 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
+use AppBundle\Repository\CartRepository;
+
 class UserController extends Controller
 {
+    
+    private $cartRepository;
+
+    public function __construct(CartRepository $cartRepository)
+    {
+        $this->cartRepository = $cartRepository;
+    }
+
     /**
      * @Route("/register", name="user_register")
      * @param Request $request
@@ -54,8 +62,14 @@ class UserController extends Controller
             ->getDoctrine()
             ->getRepository(User::class)
             ->find($userId);
+        $products = $this
+            ->cartRepository
+            ->all();
 
         return $this->render("user/cart.html.twig",
-            ['user' => $user]);
+            ['products' => $products,
+                'user' => $user]);
     }
+
+
 }

@@ -19,6 +19,14 @@
     <!-- Custom styles for this template -->
     <link href="{{ asset('theme/css/heroic-features.css') }}" rel="stylesheet">
 {% block stylesheets %}
+    <style>
+        footer{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
 {% endblock %}
 </head>
 
@@ -62,9 +70,9 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
-                            <a class="dropdown-item" href="{{ path('product_category')}}"></a>
-                            <a class="dropdown-item" href="{{ path('product_index') }}">hut</a>
-                            <a class="dropdown-item" href="{{ path('product_category') }}">Sculpture</a>
+                            <a class="dropdown-item" href="{{ path('product_index')}}?catId=1">Graphic</a>
+                            <a class="dropdown-item" href="{{ path('product_index') }}?catId=2">Sculpture</a>
+                            <a class="dropdown-item" href="{{ path('product_index') }}?catId=3">Painting</a>
 
                         </div>
                     </li>
@@ -100,7 +108,8 @@
 <!-- Footer -->
 <footer class="py-5 bg-dark">
     <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Milena Valcheva 2018</p>
+        <p class="m-0 text-center text-white">Copyright 2018 &copy; Art Gallery Inc. All rights reserved.</p>
+        <p class="m-0 text-center text-white">Designed by Milena Valcheva</p>
     </div>
     <!-- /.container -->
 </footer>
@@ -111,6 +120,9 @@
 <script src="{{ asset('theme/vendor/bootstrap/js/bootstrap.bundle.min.js') }}">
 </script><script src="{{ asset('fontawesome/js/all.min.js') }}"></script>
 {% block javascripts %}
+    <script>
+
+    </script>
 {% endblock %}
 </body>
 

@@ -8,7 +8,8 @@ use AppBundle\Form\ProductType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Product controller.
@@ -22,12 +23,21 @@ class ProductController extends Controller
      *
      * @Route("/", name="product_index")
      * @Method("GET")
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
-        $products = $em->getRepository('AppBundle:Product')->findAll();
+
+        $catId = $request->query->get('catId');
+
+        if ($catId) {
+            $products = $em->getRepository('AppBundle:Product')->findBy(['category' => $catId ]);
+        } else {
+            $products = $em->getRepository('AppBundle:Product')->findAll();
+        }
 
         return $this->render('product/index.html.twig', array(
             'products' => $products,
@@ -177,6 +187,6 @@ class ProductController extends Controller
         ));
     }
 
-    
+
 
 }
