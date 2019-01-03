@@ -6286,7 +6286,7 @@ function boxModelAdjustment( elem, dimension, box, isBorderBox, styles, computed
 		extra = 0,
 		delta = 0;
 
-	// Adjustment may not be necessary
+	// Cart may not be necessary
 	if ( box === ( isBorderBox ? "border" : "content" ) ) {
 		return 0;
 	}

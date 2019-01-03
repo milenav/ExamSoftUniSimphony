@@ -46,7 +46,7 @@ class UserController extends Controller
     }
 
     /**
-     * @Route("/profile", name="user_profile")
+     * @Route("/cart", name="user_cart")
      */
     public function profile(){
         $userId = $this->getUser()->getId();
@@ -55,7 +55,7 @@ class UserController extends Controller
             ->getRepository(User::class)
             ->find($userId);
 
-        return $this->render("user/profile.html.twig",
+        return $this->render("user/cart.html.twig",
             ['user' => $user]);
     }
 }

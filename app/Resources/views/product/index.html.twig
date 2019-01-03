@@ -2,8 +2,6 @@
 
 {% block body %}
     <!-- Page Features -->
-    <br>
-    <br>
 
     <div class="row text-center">
 
@@ -24,12 +22,20 @@
                 </div>
                 <div class="card-footer">
                     <a href="{{ path('product_show', {'id': product.id}) }}" class="btn btn-primary">Find Out More!</a>
+                    <a href="{{ path('user_profile') }}" class="btn btn-primary">Buy!</a>
                 </div>
             </div>
         </div>
         {% endfor %}
     </div>
     <!-- /.row -->
-    <br>
+    {% block stylesheets %}
+        <style>
+            .row{
+                padding: 70px 0 10px 0;
+            }
+        </style>
+
+    {% endblock %}
 
 {% endblock %}

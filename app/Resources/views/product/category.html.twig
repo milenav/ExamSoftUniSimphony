@@ -1,12 +1,6 @@
 {% extends 'base.html.twig' %}
 
     {% block body %}
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-
         <form style="width: 30rem;" action="{{ path('product_category') }}" method="post">
             <div class="form-group">
                 <label for="category_name" class="required">Name</label>
@@ -25,13 +19,14 @@
 
         </form>
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        {% block stylesheets %}
+            <style>
+                form{
+                    padding: 144px 40px 160px 40px;
+                    margin-left: 300px;
+                }
+            </style>
+
+        {% endblock %}
     {% endblock %}
 

@@ -303,7 +303,7 @@ class Product
     public function setSummary()
     {
         $this->summary = substr($this->getNote(), 0,
-            strlen($this->getNote()) / 2
+            strlen($this->getNote()) / 4
         ) . "...";
     }
 }
