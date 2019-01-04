@@ -154,9 +154,6 @@ class ProductController extends Controller
         $categories = $this->getDoctrine()->getRepository('AppBundle:Category')->findAll();
         $authors = $this->getDoctrine()->getRepository('AppBundle:Author')->findAll();
 
-        if ($product === null){
-            return $this->redirectToRoute("product_index");
-        }
 
         /**@var User $currentUser*/
         $currentUser = $this->getUser();

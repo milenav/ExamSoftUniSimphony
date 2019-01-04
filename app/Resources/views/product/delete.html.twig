@@ -55,11 +55,12 @@
         </div>
         <br>
 
+
         {{ form_row(form._token) }}
 
         <div style="width: 30rem;">
-            <input type="submit" class="btn btn-primary" value="Delete" />
-            <a class="btn btn-outline-primary" href="{{ path('product_show', {'id': product.id}) }}">Cancel</a>
+            <input type="submit" class="btn btn-outline-danger" value="Delete" />
+            <a class="btn btn-outline-secondary" href="{{ path('product_show', {'id': product.id}) }}">Cancel</a>
         </div>
 
     </form>
@@ -68,7 +69,6 @@
         <style>
             form{
                 padding: 80px 0 100px 10px;
-                margin-left: 300px;
             }
         </style>
 

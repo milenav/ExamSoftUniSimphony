@@ -9,30 +9,40 @@
     {% set total = 0 %}
     {% for product in products %}
         {% set total = total + product.product.price * product.count %}
-        <div class="list-group">
-            <h5 class="list-group-item active">
+<div class="col-lg-3 col-md-6 mb-4">
+    <div class="card" style="width: 18rem;">
+        <div class="card-header">
                Title: {{ product.product.title }}
-            </h5>
-            <p class="list-group-item">Count: {{ product.count }}</p>
-            <p class="list-group-item">Price: {{ product.product.price * product.count }}</p>
         </div>
-        <div class="push"></div>
-    {% endfor %}
-    <div class="list-group">
-        <h5 class="list-group-item active">Total price: {{ total }}</h5>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Count: {{ product.count }}</li>
+            <li class="list-group-item">Price: {{ product.product.price * product.count }}</li>
+        </ul>
     </div>
+    <div class="card-body">
+        <a class="btn btn-outline-secondary" href="{{ path('product_index') }}">Back</a>
+        <input type="submit" class="btn btn-outline-danger" value="Delete" />
+    </div>
+</div>
+    {% endfor %}
+<div class="col-lg-3 col-md-6 mb-4">
+    <div class="card" style="width: 18rem;">
+        <div class="card-header">
+        <h5 class="list-group-item list-group-item-dark">Total price: {{ total }}</h5>
+    </div>
+    </div>
+</div>
     {% block stylesheets %}
-        <style>
+      <style>
             #hello{
                 padding-top: 50px;
-            }
-            .list-group{
-                padding: 20px 10px 20px 10px;
-                margin: 5px 200px 50px 500px;
             }
             #not{
                 margin: 40px 0 295px 0;
             }
+          .btn-outline-danger, .btn-outline-secondary{
+              margin-left: 0.5em;
+          }
 
         </style>
 
