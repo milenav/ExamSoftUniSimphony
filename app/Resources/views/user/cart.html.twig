@@ -10,26 +10,24 @@
     {% for product in products %}
         {% set total = total + product.product.price * product.count %}
 <div class="col-lg-3 col-md-6 mb-4">
-    <div class="card" style="width: 18rem;">
+    <div class="card bg-light mb-3" style="width: 18rem;">
         <div class="card-header">
                Title: {{ product.product.title }}
         </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">Count: {{ product.count }}</li>
-            <li class="list-group-item">Price: {{ product.product.price * product.count }}</li>
-        </ul>
+        <div class="card-body">
+            <p class="card-text ">Count: {{ product.count }}</p>
+            <p class="card-text">Price: {{ product.product.price * product.count }}</p>
+        </div>
     </div>
     <div class="card-body">
         <a class="btn btn-outline-secondary" href="{{ path('product_index') }}">Back</a>
-        <input type="submit" class="btn btn-outline-danger" value="Delete" />
+        <a class="btn btn-outline-danger" href="{{ path('cart_remove', {'id' : product.product.id}) }}">Delete</a>
     </div>
 </div>
     {% endfor %}
 <div class="col-lg-3 col-md-6 mb-4">
-    <div class="card" style="width: 18rem;">
-        <div class="card-header">
-        <h5 class="list-group-item list-group-item-dark">Total price: {{ total }}</h5>
-    </div>
+    <div class="card text-white bg-primary mb-3" style="width: 18rem;">
+        <div class="card-header">Total price: {{ total }}</div>
     </div>
 </div>
     {% block stylesheets %}

@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="content">
+        <img src="https://www.mapz.com/stadtplan/image/stadtplan-sofia-multicolor.png" alt="" style="width:100%">
+        <h3>Art Gallery</h3>
+        <p>Sofia , Bulgaria</p>
+        <p>52A Pencho Slaveykov blvd</p>
+        <p>Tel:	+359 899 706007</p>
+        <p>E-mail: office@artgallery.com</p>
+    </div>
+
+    
+    {% block stylesheets %}
+        <style>
+            img{
+                margin: 3em 0 3em 0;
+            }
+        </style>
+        {% endblock %}
+{% endblock %}
+

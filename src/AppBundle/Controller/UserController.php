@@ -71,5 +71,11 @@ class UserController extends Controller
                 'user' => $user]);
     }
 
-
+    /**
+     * @Route("/contact", name="user_contact")
+     */
+    public function contact()
+    {
+        return $this->render("user/contact.html.twig");
+    }
 }
